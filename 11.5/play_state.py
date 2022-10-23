@@ -5,6 +5,7 @@ import logo_state
 import title_state
 import item_state
 import add_delete_state
+import random
 
 class Grass:
     def __init__(self):
@@ -22,11 +23,11 @@ class Boy:
         self.ball_image = load_image('ball21x21.png')
         self.big_ball_image = load_image('ball41x41.png')
         self.item = None
-        self.mode = None
+        self.speed = random.randint(10, 30) / 10
 
     def update(self):
         self.frame = (self.frame + 1) % 8
-        self.x += self.dir * 1
+        self.x += self.dir * self.speed
         if self.x > 800:
             self.x = 800
             self.dir = -1 # 왼쪽
