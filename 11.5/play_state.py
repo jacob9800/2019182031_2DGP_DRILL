@@ -69,7 +69,7 @@ running = True
 # 게임 초기화 함수
 def enter():
     global boy, grass, running
-    boy = Boy()
+    boy = [Boy() for i in range(1)]
     grass = Grass()
     running = True
 
@@ -81,7 +81,8 @@ def exit():
 
 def update():
     global boy
-    boy.update()
+    for kid in boy:
+        kid.update()
 
 
 def draw():
@@ -92,7 +93,8 @@ def draw():
 
 def draw_world():
     grass.draw()
-    boy.draw()
+    for kid in boy:
+       kid.draw()
 
 
 def pause():

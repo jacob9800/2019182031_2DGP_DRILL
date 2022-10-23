@@ -5,5 +5,5 @@ import logo_state
 import item_state
 
 pico2d.open_canvas()
-game_framework.run(play_state)
+game_framework.run(logo_state)
 pico2d.close_canvas()

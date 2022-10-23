@@ -37,11 +37,11 @@ def handle_events():
                 case pico2d.SDLK_ESCAPE:
                     game_framework.pop_state()
                 case pico2d.SDLK_0:
-                    play_state.boy.mode = None
                     game_framework.pop_state()
                 case pico2d.SDLK_EQUALS:
-                    play_state.boy.mode = 'Add'
+                    kid = play_state.Boy()
+                    play_state.boy.append(kid)
                     game_framework.pop_state()
                 case pico2d.SDLK_MINUS:
-                    play_state.boy.mode = 'Minus'
+                    play_state.boy.pop(-1)
                     game_framework.pop_state()
