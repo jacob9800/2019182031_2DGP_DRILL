@@ -49,7 +49,7 @@ def update():
             print('COLLISION', group)
             a.handle_collision(b, group) # 어떤 놈(b)이 와서 나한테 꼬라박았나?
             b.handle_collision(a, group) # 어떤 놈(a)이 와서 나한테 꼬라박았나?
-    delay(0.1)
+    #delay(0.1)
     # for ball in balls.copy():
     #     if collide(boy, ball):
     #         #print("COLLISION boy : ball")
